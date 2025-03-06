@@ -43,6 +43,9 @@
         </div>
     </nav>
 
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
+
     <main>
         <div class="container">
             <section id="about">
@@ -52,8 +55,7 @@
                     Passionate about advancing medical imaging through AI-driven solutions, I excel at designing
                     high-performance, scalable software architectures that bridge cutting-edge technology with
                     healthcare innovation. Currently based in Munich, Germany, my main development language is Modern
-                    C++, and
-                    I have extensive experience in Java, Kotlin, Swift, Rust, Python, and TypeScript.
+                    C++, and I have extensive experience in Java, Kotlin, Swift, Rust, Python, and TypeScript.
                 </p>
             </section>
 
@@ -80,8 +82,7 @@
                     My current open-source projects include custom implementations of <a
                         href="https://github.com/amirnn/algorithms"><strong>Algorithms and Data
                             Structures</strong></a> using Modern C++ (23), Java, Kotlin, Swift, and Python. These
-                    projects are
-                    developed from the ground up to provide a deeper understanding of fundamental concepts.
+                    projects are developed from the ground up to provide a deeper understanding of fundamental concepts.
                 </p>
                 <p>
                     Additionally, I maintain my own library for <a
@@ -105,8 +106,7 @@
             <section id="cv">
                 <h2>Curriculum Vitae</h2>
                 <p>You can view my public CV for detailed information on my education, work experience, publications,
-                    and
-                    skills.
+                    and skills.
                     Download it <a href="resources/cv-public.pdf" target="_blank" rel="noopener noreferrer">here</a>.
                 </p>
             </section>
@@ -134,6 +134,14 @@
             <p>&copy; 2025 Amir Nourinia. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- JavaScript for Dark Theme Toggle -->
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
 </body>
 
 </html>

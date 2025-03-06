@@ -1,3 +1,35 @@
+/* CSS Variables for Light Theme */
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --header-bg: linear-gradient(135deg, #1e3c72, #2a5298);
+    --header-text: #fff;
+    --link-color: #2a5298;
+    --link-hover: #2a5298;
+    --nav-bg: #fff;
+    --nav-text: #333;
+    --footer-bg: #333;
+    --footer-text: #fff;
+    --section-title-color: #1e3c72;
+    --section-title-border: #2a5298;
+}
+
+/* CSS Variables for Dark Theme */
+.dark-theme {
+    --bg-color: #121212;
+    --text-color: #ddd;
+    --header-bg: linear-gradient(135deg, #000000, #434343);
+    --header-text: #fff;
+    --link-color: #bb86fc;
+    --link-hover: #bb86fc;
+    --nav-bg: #1e1e1e;
+    --nav-text: #ddd;
+    --footer-bg: #1e1e1e;
+    --footer-text: #ddd;
+    --section-title-color: #bb86fc;
+    --section-title-border: #bb86fc;
+}
+
 /* Basic reset */
 * {
     margin: 0;
@@ -9,11 +41,11 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
-/* Centering content and responsive container */
+/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -23,8 +55,8 @@ body {
 
 /* Header styling */
 header {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #fff;
+    background: var(--header-bg);
+    color: var(--header-text);
     padding: 60px 0;
     text-align: center;
 }
@@ -40,7 +72,7 @@ header p {
 
 /* Navigation styling */
 nav {
-    background-color: #fff;
+    background-color: var(--nav-bg);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -62,14 +94,14 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: var(--nav-text);
     font-weight: 500;
     padding: 15px 0;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #2a5298;
+    color: var(--link-hover);
 }
 
 /* Mobile navigation styling */
@@ -84,6 +116,26 @@ nav ul li a:hover {
     }
 }
 
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--link-color);
+    color: var(--header-text);
+}
+
 /* Main content styling */
 main {
     padding: 40px 0;
@@ -96,8 +148,8 @@ main section {
 main section h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #1e3c72;
-    border-bottom: 2px solid #2a5298;
+    color: var(--section-title-color);
+    border-bottom: 2px solid var(--section-title-border);
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -114,7 +166,7 @@ main section ul li {
 
 /* Link styling */
 a {
-    color: #2a5298;
+    color: var(--link-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -125,8 +177,8 @@ a:hover {
 
 /* Footer styling */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
