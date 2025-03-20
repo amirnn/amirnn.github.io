@@ -120,7 +120,6 @@ https://your-domain.com
 ✅ Keep system and Python dependencies updated  
 
 ## 🛠 Future Improvements
-- Add domain support
 - Add more API endpoints
 - Add frontend framework support (React/Vue)
 
