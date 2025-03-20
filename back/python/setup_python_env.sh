@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Exit immediately if a command exits with a non-zero status
@@ -13,7 +12,7 @@ if [ ! -d "venv" ]; then
 fi
 
 # Activate the virtual environment
-source venv/bin/activate
+source ./venv/bin/activate
 
 # Install Python package dependencies
 echo "📦 Installing Python packages..."
